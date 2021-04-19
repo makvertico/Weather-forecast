@@ -1,0 +1,235 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.background{
+    background-position: center;
+    background-image: url('./image/aboutus.jpg');
+    min-height: 80%;
+    min-width: 1024px;
+
+}
+
+
+
+
+.message{
+    
+    backdrop-filter: blur(20px);
+    /* padding: 70px 0; */
+    background-color: rgba(0, 0, 0, 0.137);
+    text-align: center;
+    width: 80%;
+
+    margin: 1rem auto ;
+    padding: 0.8rem 1rem;
+}
+.message__content {
+    
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+       
+}
+.message__content-heading{
+    width: 10%;
+    text-align: center; 
+    padding: 1rem 0; 
+} 
+.message__content-heading h3 span{    
+    font-size: 1.55rem;
+   
+    text-transform: uppercase;
+    border-bottom: 3px solid chartreuse;
+    padding: 1rem;
+    font-weight: 400;
+    letter-spacing: 2.5px; 
+    font-family: 'Poppins', sans-serif;
+}        
+.message__content-pera{
+   margin-left: 10px;
+   margin-right: 10px;
+}
+
+.message__content-pera p{
+    font-size: 1.15rem;
+    line-height: 2rem;
+    word-spacing: 0.7px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 1rem;
+    
+}  
+@media only screen and (max-width: 1030px) {
+    .message__content{
+        flex-direction: column;
+    }
+    .message__content-heading{
+            width: 100%;
+            margin-bottom: 1.5rem;
+        }
+    .message__content-pera{
+            width: 100%;
+        }
+}
+    
+@media only screen and (max-width: 600px) {
+    .message{
+        margin: 0 auto ;
+        width: 88%;
+    }       
+    .message__content-heading{
+        margin-bottom: 0.3rem;
+    }
+    .message__content-heading h3 span {      
+        font-size: 1.5rem; 
+        border-bottom:unset ; 
+        color: chartreuse;                      
+        padding:unset;                        
+        letter-spacing: 2.5px; 
+    } 
+}
+    
+
+
+
+.ourTeam{
+   
+    width: 74%;
+    margin: 7rem auto;
+}
+.ourTeam__heading{
+        
+        text-align: center;
+        color: rgb(255, 255, 255);
+        margin-bottom: 2rem; 
+}      
+.ourTeam__heading h3{
+    border-right:1px solid yellowgreen;
+    border-left: 1px solid yellowgreen;
+    padding: 2rem;
+    background-color: rgba(245, 245, 245, 0.144);
+    font-size: 1.55rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+}          
+.ourTeam__heading h3 span{
+    border-bottom: 3px solid rgb(0, 183, 255);
+    padding: 0.5rem 1rem;
+}
+.ourTeam__card{
+
+
+    backdrop-filter: blur(20px);
+    /* background-color: rgba(255, 255, 255, 0.068); */
+    margin: 0 auto;
+    align-items: center; 
+    width: 70%;
+}       
+   
+.card{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2rem;
+}
+.card__container{   
+   
+    width: 40%;
+}
+
+.card__container-profile__image{
+    width: 100%;  
+    overflow: hidden;   
+}
+.card__container-profile__image img{
+    width: 100%;                  
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: cover;   
+}
+.card__container-description{
+    margin: 1rem ;
+    text-align: center;
+}
+.card__container-description__FirstName{
+    text-transform: uppercase;
+}
+.card__container-description__FirstName,
+.card__container-description__LastName{
+    font-size: 1.05rem;                           
+    letter-spacing: 2px;               
+    font-weight: 300;
+    color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 0.3rem;
+}
+.card__container-description__Designation{
+    margin-top: 0.8rem; 
+    color: red;
+    font-size: 0.9rem;
+    letter-spacing: 2.5px;
+    color: whitesmoke;
+    font-family: 'Nunito Sans', sans-serif; 
+    font-weight: 400;
+}
+.heading{
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    /* margin-top: 2rem; */
+    padding: 2rem;
+    
+}
+.heading h3 span{
+    font-weight: 300;
+    padding: 0.5rem;
+}
+
+@media only screen and (max-width:1024px){
+    .ourTeam__card{
+        width: 88%;
+    }
+}
+@media only screen and (max-width:770px){
+    .background{
+        background-image: none;
+    }
+    .ourTeam__card{
+        width: 95%;
+    }
+    .card__container-description__FirstName,
+    .card__container-description__LastName{
+        color: black;
+        font-size: 1.03rem;                           
+        letter-spacing: 0.8px; 
+    }
+    .card__container-description__Designation{     
+        font-size: 0.9rem;
+        letter-spacing:1.8px;        
+    }
+}
+@media only screen and (max-width:600px){
+    .card{
+        flex-direction: column;
+    }
+    .card__container{   
+        width: 100%;
+        
+        /* border-bottom: 1px solid red; */
+    }
+    .card__container:first-child{
+        margin-bottom: 1.5rem;
+        border-bottom: 1px solid red;
+    }
+    .card__container-profile__image{
+        border-radius: 20px;
+    }
+}
+ 

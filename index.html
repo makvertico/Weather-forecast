@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Weather App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="server.js"></script>
+    <link rel="stylesheet"  href='style.css' >
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/656c2318ce.js" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+    <div class="weather" id="weather_background">
+        <div class="weather__container">
+            <div class='weather__container-temp'>
+                <h1 id="show">
+                    <span>select city</span>
+                    <span id="error"></span>                    
+                </h1>
+            </div>
+            <div class='weather__container-moreDetails'>
+               
+                <input type="text" name="city" id="city" placeholder="Enter City Name" />
+                <button id="submitLocation" ><i class="fa fa-search" aria-hidden="true"></i></button>
+           
+                <!-- <hr/> -->
+                <div>
+                    <h3 class='more_details_name'>Additional Information</h3>
+                </div>
+                <div id='Additional_Information'></div>              
+                <hr>
+                <div>
+                    <h3 class='more_details_name'>Temperature</h3>
+                </div>
+                <div id='Temperature'></div>
+                <hr>
+                <div class="about_container">
+                    <a href="about.html">ABOUT &#8594;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- Trigger button click on pressing Enter -->
+<script>
+    var input = document.getElementById("city");
+    input.addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById("submitLocation").click();
+        }
+    });
+</script>
+
+</html>
